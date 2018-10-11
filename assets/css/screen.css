@@ -245,7 +245,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .site-nav-logo img {
     display: block;
     width: auto;
-    height: 21px;
+    height: 24px;
 }
 
 .nav {
@@ -319,6 +319,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
   fill: #2c3e50;
 }
 
+
 .social-link-fb svg {
     height: 1.5rem;
 }
@@ -335,6 +336,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     height: 1.9rem;
 }
 
+
+.site-nav.page .subscribe-button{
+  color: #2c3e50;
+  border: #2c3e50 1px solid;
+}
 .subscribe-button {
     display: block;
     padding: 4px 10px;
