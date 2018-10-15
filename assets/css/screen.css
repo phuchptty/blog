@@ -2288,11 +2288,11 @@ Usage (In Ghost editor):
 
 .site-footer-nav svg {
     height: 1.8rem;
-    fill: #666;
+    fill: #999;
 }
 
 .site-footer-nav a:hover svg {
-    fill: var(--blue);
+    fill: #666;
 }
 
 .site-footer-nav .social-link-fb svg {
