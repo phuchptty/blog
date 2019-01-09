@@ -1,20 +1,15 @@
-<nav class="site-nav {{class_suffix}}">
+<nav class="site-nav">
     <div class="site-nav-left">
         {{#if @blog.logo}}
-            <a class="site-nav-logo" href="{{@blog.url}}"><img src="/assets/logo{{logo_suffix}}.png" alt="{{@blog.title}}" /></a>
+            <a class="site-nav-logo" href="{{@blog.url}}"><img src="/assets/logo.png" alt="{{@blog.title}}" /></a>
         {{else}}
             <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
         {{/if}}
-        {{#if @blog.navigation}}
-            {{navigation}}
-        {{/if}}
+
     </div>
     <div class="site-nav-right">
-        <div class="social-links">
-          <a href="{{@blog.url}}/rss/" class="social-link social-link-github" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-        </div>
-        {{#if @labs.subscribers}}
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        {{#if @blog.navigation}}
+            {{navigation}}
         {{/if}}
     </div>
 </nav>

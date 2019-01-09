@@ -3,19 +3,19 @@
 into the {body} of the default.hbs template --}}
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
-<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+<!-- <header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}"> -->
+<header class="site-header outer no-cover">
     <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                {{#if @blog.logo}}
-                    <img class="site-logo" src="/assets/logo_white.png" alt="{{@blog.title}}" />
-                {{else}}
-                    {{@blog.title}}
-                {{/if}}
-            </h1>
-            <h2 class="site-description">{{@blog.description}}</h2>
-        </div>
-        {{> "site-nav" logo_suffix="_white"}}
+      {{> "site-nav" }}
+      <div class="site-header-content">
+          <h2 class="site-description">{{@blog.description}}</h2>
+          <div class="social-links">
+            <a href="{{@blog.url}}/rss/" class="social-link social-link-github" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+            {{#if @labs.subscribers}}
+                <a class="subscribe-button" href="#subscribe">Subscribe</a>
+            {{/if}}
+          </div>
+      </div>
     </div>
 </header>
 

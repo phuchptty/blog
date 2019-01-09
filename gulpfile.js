@@ -58,6 +58,7 @@ gulp.task('zip', ['css'], function () {
     return gulp.src([
         '**',
         '!node_modules', '!node_modules/**',
+        '!.git', '!.git/**',
         '!dist', '!dist/**'
     ])
         .pipe(zip(filename))
