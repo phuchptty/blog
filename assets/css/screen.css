@@ -33,7 +33,7 @@ production stylesheet in assets/built/screen.css
 
 body {
     /* background: #f4f8fb; */
-    background: #FFF;
+    background: #282c34;
 }
 
 .img {
@@ -93,12 +93,14 @@ body {
 /* ---------------------------------------------------------- */
 
 @media (min-width: 900px) {
+
     .home-template .post-feed,
     .tag-template .post-feed,
     .author-template .post-feed {
         margin-top: -70px;
         padding-top: 0px;
     }
+
     .home-template .site-nav {
         position: relative;
         /* top: -70px; */
@@ -113,10 +115,12 @@ body {
     position: relative;
     padding-top: 9px;
     padding-bottom: 10px;
-    color: #2c3e50;
-    background: #FFF no-repeat center center;
-    background-size: cover;
+    color: #ffffff;
     border-bottom: 1px solid #eaecef;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/photo-1467622234040-7f51f6ae22a6-1.jpg");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .site-header:before {
@@ -183,6 +187,7 @@ body {
     .site-title {
         font-size: 3rem;
     }
+
     .site-description {
         font-size: 1.8rem;
     }
@@ -271,17 +276,12 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .nav li a {
     display: inline-block;
-    color: #2c3e50;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 500;
     transition: all ease 0.3s;
     margin-bottom: -2px;
     border-bottom: 2px solid transparent;
-}
-
-.nav li:nth-last-of-type(3) a{
-  color: var(--blue);
-  border-bottom: 2px solid var(--blue);
 }
 
 .nav li a:hover {
@@ -323,7 +323,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .social-link svg {
     height: 1.8rem;
-    fill: #2c3e50;;
+    fill: #2c3e50;
+    ;
 }
 
 .social-link-fb svg {
@@ -377,10 +378,12 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         padding-right: 0;
         padding-left: 0;
     }
+
     .site-nav-left {
         margin-right: 0;
         padding-left: 4vw;
     }
+
     .site-nav-right {
         /* display: none; */
     }
@@ -410,7 +413,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     border-radius: 5px;
     transition: all 0.3s ease;
     border: 1px solid #eeeeee;
-    box-shadow: rgba(39,44,49,0.06) 1px 1px 2px, rgba(39, 44, 49, 0.03) 1px 1px 2px;
+    box-shadow: rgba(39, 44, 49, 0.06) 1px 1px 2px, rgba(39, 44, 49, 0.03) 1px 1px 2px;
 }
 
 .post-card:hover {
@@ -509,30 +512,39 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .author-list-item:nth-child(1) {
     z-index: 10;
 }
+
 .author-list-item:nth-child(2) {
     z-index: 9;
 }
+
 .author-list-item:nth-child(3) {
     z-index: 8;
 }
+
 .author-list-item:nth-child(4) {
     z-index: 7;
 }
+
 .author-list-item:nth-child(5) {
     z-index: 6;
 }
+
 .author-list-item:nth-child(6) {
     z-index: 5;
 }
+
 .author-list-item:nth-child(7) {
     z-index: 4;
 }
+
 .author-list-item:nth-child(8) {
     z-index: 3;
 }
+
 .author-list-item:nth-child(9) {
     z-index: 2;
 }
+
 .author-list-item:nth-child(10) {
     z-index: 1;
 }
@@ -549,11 +561,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .author-name {
-  vertical-align: top;
-  height: 34px;
-  line-height: 34px;
-  display: inline-block;
-  padding-left: 5px;
+    vertical-align: top;
+    height: 34px;
+    line-height: 34px;
+    display: inline-block;
+    padding-left: 5px;
 }
 
 .moving-avatar {
@@ -586,7 +598,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     white-space: nowrap;
     background: var(--darkgrey);
     border-radius: 3px;
-    box-shadow: rgba(39,44,49,0.08) 0 12px 26px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+    box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
     opacity: 0;
     transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: translateY(6px);
@@ -671,6 +683,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     .post-feed {
         padding-top: 5vw;
     }
+
     .post-card {
         margin: 0 20px 5vw;
     }
@@ -691,6 +704,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     position: relative;
     z-index: 50;
 }
+
 /* ^ Required to make .post-full-content:before/after z-index stacking work */
 
 .post-full-header {
@@ -699,6 +713,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     max-width: 1040px;
     text-align: center;
 }
+
 @media (max-width: 500px) {
     .post-full-header {
         padding: 14vw 3vw 10vw;
@@ -766,6 +781,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
         padding: 5vw 7vw 0;
     }
 }
+
 @media (max-width: 800px) {
     .post-full-content {
         font-size: 1.4rem;
@@ -781,7 +797,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     display: block;
     width: 20px;
     height: 200px;
-    background: rgba(39,44,49,0.15);
+    background: rgba(39, 44, 49, 0.15);
     filter: blur(5px);
     transform: rotate(-5deg);
 }
@@ -795,7 +811,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     display: block;
     width: 20px;
     height: 200px;
-    background: rgba(39,44,49,0.15);
+    background: rgba(39, 44, 49, 0.15);
     filter: blur(5px);
     transform: rotate(5deg);
 }
@@ -867,7 +883,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
     max-width: 1040px;
     height: auto;
 }
+
 @media (max-width: 1040px) {
+
     .post-full-content img,
     .post-full-content video {
         width: 100%;
@@ -897,7 +915,7 @@ Usage (In Ghost editor):
 <small>Your image caption</small>
 
 */
-.post-full-content img + br + small {
+.post-full-content img+br+small {
     display: block;
     margin-top: -3em;
     margin-bottom: 1.5em;
@@ -932,7 +950,7 @@ Usage (In Ghost editor):
     padding: 0 5px 2px;
     font-size: 0.8em;
     line-height: 1em;
-    font-weight: 400!important;
+    font-weight: 400 !important;
     background: var(--whitegrey);
     border-radius: 3px;
 }
@@ -997,6 +1015,7 @@ Usage (In Ghost editor):
     font-size: 3.6rem;
     font-weight: 700;
 }
+
 @media (max-width: 500px) {
     .post-full-content h1 {
         font-size: 3.2rem;
@@ -1008,6 +1027,7 @@ Usage (In Ghost editor):
     font-size: 3.2rem;
     font-weight: 700;
 }
+
 @media (max-width: 500px) {
     .post-full-content h2 {
         font-size: 2.8rem;
@@ -1019,6 +1039,7 @@ Usage (In Ghost editor):
     font-size: 2.8rem;
     font-weight: 700;
 }
+
 @media (max-width: 500px) {
     .post-full-content h3 {
         font-size: 2.4rem;
@@ -1030,6 +1051,7 @@ Usage (In Ghost editor):
     font-size: 2.4rem;
     font-weight: 700;
 }
+
 @media (max-width: 500px) {
     .post-full-content h4 {
         font-size: 2.3rem;
@@ -1046,12 +1068,14 @@ Usage (In Ghost editor):
     line-height: 1.35em;
     text-align: center;
 }
+
 @media (min-width: 1180px) {
     .post-full-content h5 {
         max-width: 1060px;
         width: 100vw;
     }
 }
+
 @media (max-width: 500px) {
     .post-full-content h5 {
         padding: 0 0 0.5em;
@@ -1064,6 +1088,7 @@ Usage (In Ghost editor):
     font-size: 2.2rem;
     font-weight: 700;
 }
+
 @media (max-width: 500px) {
     .post-full-content h6 {
         font-size: 2rem;
@@ -1096,16 +1121,20 @@ Usage (In Ghost editor):
         font-size: 1.2rem;
         line-height: 1.3em;
     }
+
     .post-full-title {
         font-size: 2.9rem;
     }
+
     .post-full-image {
         margin-bottom: 4vw;
         height: 350px;
     }
+
     .post-full-content {
         padding: 0;
     }
+
     .post-full-content:before,
     .post-full-content:after {
         display: none;
@@ -1135,13 +1164,13 @@ Usage (In Ghost editor):
 }
 
 .post-full-content table td:first-child {
-    background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
     background-size: 20px 100%;
     background-repeat: no-repeat;
 }
 
 .post-full-content table td:last-child {
-    background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
     background-position: 100% 0;
     background-size: 20px 100%;
     background-repeat: no-repeat;
@@ -1237,15 +1266,13 @@ Usage (In Ghost editor):
     line-height: 37px;
     font-weight: 400;
     text-align: center;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
-    background: linear-gradient(
-    color(var(--blue) whiteness(+7%)),
-    color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-    color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-    color(var(--blue) lightness(-4%) saturation(-10%))
-    );
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    background: linear-gradient(color(var(--blue) whiteness(+7%)),
+            color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
+            color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
+            color(var(--blue) lightness(-4%) saturation(-10%)));
     border-radius: 5px;
-    box-shadow: 0 0 0 1px inset rgba(0,0,0,0.14);
+    box-shadow: 0 0 0 1px inset rgba(0, 0, 0, 0.14);
 
     -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -1259,6 +1286,7 @@ Usage (In Ghost editor):
     .subscribe-form-title {
         font-size: 2.4rem;
     }
+
     .subscribe-form p {
         font-size: 1.6rem;
     }
@@ -1268,9 +1296,11 @@ Usage (In Ghost editor):
     .subscribe-form form {
         flex-direction: column;
     }
+
     .subscribe-form .form-group {
         width: 100%;
     }
+
     .subscribe-form button {
         margin: 10px 0 0 0;
         width: 100%;
@@ -1405,7 +1435,7 @@ Usage (In Ghost editor):
     letter-spacing: 0.2px;
     background: white;
     border-radius: 6px;
-    box-shadow: rgba(39,44,49,0.08) 0 12px 26px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+    box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
     opacity: 0;
     transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(0.98) translateY(15px);
@@ -1511,7 +1541,7 @@ Usage (In Ghost editor):
     background: var(--darkgrey) center center;
     background-size: cover;
     border-radius: 5px;
-    box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+    box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
 }
 
 .read-next-card:before {
@@ -1522,7 +1552,7 @@ Usage (In Ghost editor):
     bottom: 0;
     left: 0;
     display: block;
-    background: linear-gradient(135deg, rgba(0,40,60,0.8) 0%,rgba(0,20,40,0.7) 100%);
+    background: linear-gradient(135deg, rgba(0, 40, 60, 0.8) 0%, rgba(0, 20, 40, 0.7) 100%);
     border-radius: 5px;
 
     backdrop-filter: blur(2px);
@@ -1606,7 +1636,7 @@ Usage (In Ghost editor):
 .read-next-card-content li a {
     display: block;
     padding: 20px 0;
-    border-bottom: rgba(255,255,255,0.3) 1px solid;
+    border-bottom: rgba(255, 255, 255, 0.3) 1px solid;
     color: #fff;
     font-weight: 500;
     vertical-align: top;
@@ -1645,8 +1675,8 @@ Usage (In Ghost editor):
     display: flex;
     align-items: center;
     height: 60px;
-    border-bottom: rgba(0,0,0,0.06) 1px solid;
-    background: rgba(255,255,255,0.95);
+    border-bottom: rgba(0, 0, 0, 0.06) 1px solid;
+    background: rgba(255, 255, 255, 0.95);
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
     transform: translate3d(0, -120%, 0);
 }
@@ -1727,7 +1757,7 @@ Usage (In Ghost editor):
     display: flex;
     align-items: center;
     margin-right: 10px;
-    color: rgba(0,0,0,0.7);
+    color: rgba(0, 0, 0, 0.7);
     font-weight: 500;
 }
 
@@ -1735,7 +1765,7 @@ Usage (In Ghost editor):
     margin: 0 5px 0 10px;
     width: 18px;
     height: 18px;
-    stroke: rgba(0,0,0,0.7);
+    stroke: rgba(0, 0, 0, 0.7);
     transform: rotate(90deg);
 }
 
@@ -1806,10 +1836,12 @@ Usage (In Ghost editor):
     .floating-header {
         height: 40px;
     }
+
     .floating-header-title,
     .floating-header-logo {
         font-size: 1.5rem;
     }
+
     .floating-header-share-tw,
     .floating-header-share-fb {
         width: 40px;
@@ -1822,9 +1854,11 @@ Usage (In Ghost editor):
     .floating-header-logo {
         margin-left: 10px;
     }
+
     .floating-header-logo a {
         color: #2e2e2e;
     }
+
     .floating-header-title,
     .floating-header-divider {
         visibility: hidden;
@@ -1848,7 +1882,7 @@ Usage (In Ghost editor):
     max-width: 920px;
 }
 
-.post-template .post-content > p:first-child {
+.post-template .post-content>p:first-child {
     font-size: 1.25em;
     line-height: 1.5em;
 }
@@ -1858,7 +1892,7 @@ Usage (In Ghost editor):
 }
 
 /* Preventing full-width image overlap with post image.  */
-.post-full-image + .post-full-content .kg-content *:first-child .kg-image {
+.post-full-image+.post-full-content .kg-content *:first-child .kg-image {
     width: 100%;
 }
 
@@ -1935,10 +1969,10 @@ Usage (In Ghost editor):
     margin: 0 0 0 0.75em;
 }
 
-.kg-gallery-card + .kg-image-card.kg-width-wide,
-.kg-gallery-card + .kg-gallery-card,
-.kg-image-card.kg-width-wide + .kg-gallery-card,
-.kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
+.kg-gallery-card+.kg-image-card.kg-width-wide,
+.kg-gallery-card+.kg-gallery-card,
+.kg-image-card.kg-width-wide+.kg-gallery-card,
+.kg-image-card.kg-width-wide+.kg-image-card.kg-width-wide {
     margin: -2.25em 0 3em;
 }
 
@@ -1951,7 +1985,7 @@ Usage (In Ghost editor):
     margin: 0 0 20px 0;
     width: 100px;
     height: 100px;
-    box-shadow: rgba(255,255,255,0.1) 0 0 0 6px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 6px;
 }
 
 .site-header-content .author-bio {
@@ -1997,6 +2031,7 @@ Usage (In Ghost editor):
         line-height: 1.15em;
         letter-spacing: 0;
     }
+
     .author-location,
     .author-stats {
         display: none;
@@ -2072,7 +2107,7 @@ Usage (In Ghost editor):
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0,25,40,0.97);
+    background: rgba(0, 25, 40, 0.97);
     opacity: 0;
     transition: opacity 200ms ease-in;
     pointer-events: none;
@@ -2162,15 +2197,13 @@ Usage (In Ghost editor):
     line-height: 37px;
     font-weight: 400;
     text-align: center;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
-    background: linear-gradient(
-    color(var(--blue) whiteness(+7%)),
-    color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-    color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-    color(var(--blue) lightness(-4%) saturation(-10%))
-    );
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    background: linear-gradient(color(var(--blue) whiteness(+7%)),
+            color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
+            color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
+            color(var(--blue) lightness(-4%) saturation(-10%)));
     border-radius: 8px;
-    box-shadow: 0 0 0 1px inset rgba(0,0,0,0.14);
+    box-shadow: 0 0 0 1px inset rgba(0, 0, 0, 0.14);
 
     -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -2225,12 +2258,12 @@ Usage (In Ghost editor):
 
 .site-footer {
     position: relative;
-    color: #666;
+    color: #fff;
     /* background: color(var(--darkgrey) l(-15%)); */
 }
 
 .site-footer-content {
-    border-top:1px solid #eee;
+    border-top: 1px solid #eee;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
@@ -2240,30 +2273,32 @@ Usage (In Ghost editor):
     /* color: rgba(255,255,255,0.7); */
     font-size: 1.3rem;
 }
-.copyright{
-  vertical-align: middle;
-}
-.copyright .line-sep{
-  display: inline-block;
-  width: 1.5px;
-  background-color: #ddd;
-  vertical-align: middle;
-  height: 20px;
+
+.copyright {
+    vertical-align: middle;
 }
 
-.site-footer-logo{
-  height: 20px;
-  vertical-align: middle;
-  margin-right: 20px;
+.copyright .line-sep {
+    display: inline-block;
+    width: 1.5px;
+    background-color: #ddd;
+    vertical-align: middle;
+    height: 20px;
 }
 
-.site-footer-copyright{
-  display: inline-block;
-  margin-left: 20px;
+.site-footer-logo {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.site-footer-copyright {
+    display: inline-block;
+    margin-left: 20px;
 }
 
 .site-footer-content a {
-  color: #666;
+    color: #666;
     /* color: rgba(255,255,255,0.7); */
 }
 
@@ -2281,6 +2316,7 @@ Usage (In Ghost editor):
     margin-left: 20px;
     opacity: 0.8;
 }
+
 .site-footer-nav a:hover {
     opacity: 1;
 }
@@ -2298,8 +2334,8 @@ Usage (In Ghost editor):
     height: 1.4rem;
 }
 
-.icon-facebook svg{
-  height: 1.4rem;
+.icon-facebook svg {
+    height: 1.4rem;
 }
 
 .site-footer-nav a:before {
@@ -2322,16 +2358,106 @@ Usage (In Ghost editor):
     .site-footer-content {
         flex-direction: column;
     }
+
     .site-footer-nav a:first-child {
         margin-left: 0;
     }
-    .copyright{
-      text-align: center;
+
+    .copyright {
+        text-align: center;
     }
+
     .site-footer-logo {
-      margin-right: 0;
+        margin-right: 0;
     }
+
     .copyright .line-sep {
-      display: none;
+        display: none;
     }
+}
+
+.fa-white {
+    color: #ffffff;
+}
+
+.kg-bookmark-card {
+    width: 100%;
+    position: relative;
+}
+
+.kg-bookmark-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    color: currentColor;
+    font-family: inherit;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.kg-bookmark-container:hover {
+    text-decoration: none;
+}
+
+.kg-bookmark-content {
+    flex-basis: 0;
+    flex-grow: 999;
+    padding: 20px;
+    order: 1;
+}
+
+.kg-bookmark-title {
+    font-weight: 600;
+}
+
+.kg-bookmark-metadata,
+.kg-bookmark-description {
+    margin-top: .5em;
+}
+
+.kg-bookmark-metadata {
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kg-bookmark-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.kg-bookmark-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: text-bottom;
+    margin-right: .5em;
+    margin-bottom: .05em;
+}
+
+.kg-bookmark-thumbnail {
+    display: flex;
+    flex-basis: 24rem;
+    flex-grow: 1;
+}
+
+.kg-bookmark-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+.kg-bookmark-author {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.kg-bookmark-publisher::before {
+    content: "•";
+    margin: 0 .5em;
 }

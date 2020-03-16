@@ -1,16 +1,16 @@
 <nav class="site-nav">
     <div class="site-nav-left">
-        {{#if @blog.logo}}
-            <a class="site-nav-logo" href="https://www.pp.io"><img src="/assets/logo.png" alt="{{@blog.title}}" /></a>
-            <!-- <a class="site-nav-logo" href="{{@blog.url}}"><img src="/assets/logo.png" alt="{{@blog.title}}" /></a> -->
+        {{#if @site.logo}}
+            <a class="site-nav-logo" href="https://www.pp.io"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+            <!-- <a class="site-nav-logo" href="{{@site.url}}"><img src="/assets/logo.png" alt="{{@site.title}}" /></a> -->
         {{else}}
-            <a class="site-nav-logo" href="https://www.pp.io">{{@blog.title}}</a>
-            <!-- <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a> -->
+            <a class="site-nav-logo" href="https://www.pp.io">{{@site.title}}</a>
+            <!-- <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a> -->
         {{/if}}
 
     </div>
     <div class="site-nav-right">
-        {{#if @blog.navigation}}
+        {{#if @site.navigation}}
             {{navigation}}
         {{/if}}
     </div>
