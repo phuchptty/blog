@@ -1,6 +1,5 @@
+const cleanCSS = require('gulp-clean-css');  // npm install gulp-clean-css --save-dev
 var gulp = require('gulp');
-
-// gulp plugins and utils
 var gutil = require('gulp-util');
 var livereload = require('gulp-livereload');
 var postcss = require('gulp-postcss');
@@ -20,13 +19,6 @@ var swallowError = function swallowError(error) {
     this.emit('end');
 };
 
-var nodemonServerInit = function () {
-    livereload.listen(1234);
-};
-
-gulp.task('build', ['css'], function (/* cb */) {
-    return nodemonServerInit();
-});
 
 gulp.task('css', function () {
     var processors = [
@@ -44,27 +36,4 @@ gulp.task('css', function () {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('assets/built/'))
         .pipe(livereload());
-});
-
-gulp.task('watch', function () {
-    gulp.watch('assets/css/**', ['css']);
-});
-
-gulp.task('zip', ['css'], function () {
-    var targetDir = 'dist/';
-    var themeName = require('./package.json').name;
-    var filename = themeName + '.zip';
-
-    return gulp.src([
-        '**',
-        '!node_modules', '!node_modules/**',
-        '!.git', '!.git/**',
-        '!dist', '!dist/**'
-    ])
-        .pipe(zip(filename))
-        .pipe(gulp.dest(targetDir));
-});
-
-gulp.task('default', ['build'], function () {
-    gulp.start('watch');
 });

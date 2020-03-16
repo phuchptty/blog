@@ -38,6 +38,7 @@
         "cssnano": "3.7.1",
         "gscan": "^2.0.0",
         "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
         "gulp-livereload": "3.8.1",
         "gulp-postcss": "6.1.1",
         "gulp-sourcemaps": "1.6.0",

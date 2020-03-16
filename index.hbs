@@ -8,10 +8,10 @@ into the {body} of the default.hbs template --}}
     <div class="inner">
         {{> "site-nav" }}
         <div class="site-header-content">
-            <h2 class="site-description">{{@site.description}}</h2>
+            <h1 class="site-description">{{@site.description}}</h1>
             <div class="social-links">
                 <a href="{{@site.url}}/rss/" class="social-link social-link-github" target="_blank"
-                    rel="noopener">{{> "icons/rss"}}</a>
+                    rel="noopener"> <i class="fas fa-rss fa-sm fa-white"></i> </a>
                 {{#if @labs.subscribers}}
                 <a class="subscribe-button" href="#subscribe">Subscribe</a>
                 {{/if}}
